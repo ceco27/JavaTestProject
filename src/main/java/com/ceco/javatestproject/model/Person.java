@@ -2,12 +2,14 @@ package com.ceco.javatestproject.model;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Person {
     private final UUID id; 
     private final String name;
     private final int age;
 
-    public Person(UUID id, String name, int age) {
+    public Person(@JsonProperty("id") UUID id, @JsonProperty("name") String name, @JsonProperty("age") int age) {
         this.id = id;
         this.name = name;
         this.age = age;
