@@ -21,10 +21,10 @@ public class PersonDataAccessService implements PersonDao{
     @Override
     public int deletePersonById(UUID id) {
         try{
-            
+
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco"); 
     
             Statement stmt = con.createStatement();
             
@@ -44,7 +44,7 @@ public class PersonDataAccessService implements PersonDao{
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco"); 
     
             Statement stmt = con.createStatement();
             
@@ -66,7 +66,7 @@ public class PersonDataAccessService implements PersonDao{
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
         
-        Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+        Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco"); 
 
         Statement stmt = con.createStatement();
 
@@ -93,7 +93,7 @@ public class PersonDataAccessService implements PersonDao{
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco"); 
     
             Statement stmt = con.createStatement();
             
@@ -118,7 +118,7 @@ public class PersonDataAccessService implements PersonDao{
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco"); 
     
             Statement stmt = con.createStatement();
             
@@ -139,7 +139,7 @@ public class PersonDataAccessService implements PersonDao{
 
             Class.forName("oracle.jdbc.driver.OracleDriver");
             
-            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco2002"); 
+            Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","C##CECO","ceco");
     
             Statement stmt = con.createStatement();
             
