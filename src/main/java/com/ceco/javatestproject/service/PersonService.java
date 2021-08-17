@@ -1,6 +1,8 @@
 package com.ceco.javatestproject.service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 import com.ceco.javatestproject.dao.PersonDao;
 import com.ceco.javatestproject.model.Person;
@@ -25,6 +27,10 @@ public class PersonService {
 
     public List<Person> getAllPeople() {
         return personDao.selectAllPeople();
+    }
+
+    public Optional<Person> getPersonById(UUID id) {
+        return personDao.selectPersonById(id);
     }
 
 }
