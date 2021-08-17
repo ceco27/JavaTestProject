@@ -1,4 +1,4 @@
-package com.ceco.javatestproject.dao;
+/*package com.ceco.javatestproject.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao {
+
+    @Override
+    public int dropTable() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    private static List<Person> DB = new ArrayList<>();
 
     @Override
     public int deletePersonById(UUID id) {
@@ -41,8 +49,6 @@ public class FakePersonDataAccessService implements PersonDao {
         .orElse(0);
     }
 
-    private static List<Person> DB = new ArrayList<>();
-
     @Override
     public int insertPerson(UUID id, Person person) {
         DB.add(new Person(id, person.getName(), person.getAge()));
@@ -57,3 +63,4 @@ public class FakePersonDataAccessService implements PersonDao {
     
 
 }
+*/

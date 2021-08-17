@@ -1,7 +1,6 @@
 package com.ceco.javatestproject.service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 import com.ceco.javatestproject.dao.PersonDao;
@@ -17,7 +16,7 @@ public class PersonService {
     private final PersonDao personDao;
 
     @Autowired
-    public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
+    public PersonService(@Qualifier("oracledb") PersonDao personDao) {
         this.personDao = personDao;
     }
 
@@ -29,7 +28,7 @@ public class PersonService {
         return personDao.selectAllPeople();
     }
 
-    public Optional<Person> getPersonById(UUID id) {
+    public Person getPersonById(UUID id) {
         return personDao.selectPersonById(id);
     }
 
@@ -39,5 +38,9 @@ public class PersonService {
 
     public int updatePerson(UUID id, Person newPerson) {
         return personDao.updatePersonById(id, newPerson);
+    }
+
+    public void dropTable() {
+        personDao.dropTable();
     }
 }

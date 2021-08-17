@@ -39,7 +39,7 @@ public class PersonController {
 
     @GetMapping(path = "{id}")
     public Person getPersonById(@PathVariable("id") UUID id) {
-        return personService.getPersonById(id).orElse(null);
+        return personService.getPersonById(id);
     }
 
     @DeleteMapping(path = "{id}")
@@ -50,6 +50,11 @@ public class PersonController {
     @PutMapping(path = "{id}")
     public void updatePerson(@PathVariable("id") UUID id, @RequestBody Person personToUpdate) {
         personService.updatePerson(id, personToUpdate);
+    }
+
+    @DeleteMapping
+    public void dropTable() {
+        personService.dropTable();
     }
 
 }
